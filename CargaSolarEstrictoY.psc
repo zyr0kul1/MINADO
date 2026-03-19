@@ -1,17 +1,16 @@
-Algoritmo CargaSolarEstricto
+Algoritmo CargaInteligente;
     Definir sol, switch Como Entero;
-    Definir v Como Real;
-    Escribir "Hay sol? (1:Si / 0:No):";
+    Escribir "Detecta radiacion solar? (1:Si / 0:No):";
     Leer sol;
     Si sol == 1 Entonces
-        Escribir "Voltaje y Switch (1:On / 0:Off):";
-        Leer v, switch;
-        Si v < 14.4 Y switch == 1 Entonces
-            Escribir "ESTADO: CARGANDO";
+        Escribir "Estado del Switch de seguridad (1:Encendido / 0:Apagado):";
+        Leer switch;
+        Si sol == 1 Y switch == 1 Entonces
+            Escribir "ESTADO: CARGANDO BATERIA TOTALMENTE";
         Sino
-            Escribir "ESTADO: ESPERA O BATERIA LLENA";
+            Escribir "ESTADO: CIRCUITO ABIERTO - NO CARGA";
         FinSi
     Sino
-        Escribir "SISTEMA APAGADO";
+        Escribir "ESTADO: PANEL INACTIVO (NOCHE)";
     FinSi
 FinAlgoritmo
