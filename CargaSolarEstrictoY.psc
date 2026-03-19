@@ -1,4 +1,4 @@
-Algoritmo CargaInteligente;
+Algoritmo CargaInteligente
     Definir sol, switch Como Entero;
     Escribir "Detecta radiacion solar? (1:Si / 0:No):";
     Leer sol;
