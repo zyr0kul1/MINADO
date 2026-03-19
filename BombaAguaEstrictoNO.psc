@@ -1,19 +1,18 @@
-Algoritmo BombaAguaEstricto
-    Definir tanqueLleno Como Entero;
+Algoritmo BombeoEficiente
+    Definir tanqueLleno, nInput Como Entero;
     Definir esNoche Como Logico;
-    Definir nocheInput Como Entero;
-    Escribir "Tanque lleno? (1:Si / 0:No):";
+    Escribir "El tanque esta lleno? (1:Si / 0:No):";
     Leer tanqueLleno;
     Si tanqueLleno == 0 Entonces
-        Escribir "Es de noche? (1:Si / 0:No):";
-        Leer nocheInput;
-        esNoche <- (nocheInput == 1);
+        Escribir "Es de noche actualmente? (1:Si / 0:No):";
+        Leer nInput;
+        esNoche <- (nInput == 1); // Aqui ocurre la magia del booleano
         Si NO esNoche Entonces
-            Escribir "BOMBA: ENCENDIDA (APROVECHANDO EL SOL)";
+            Escribir "BOMBA: ENCENDIDA - APROVECHANDO LUZ SOLAR";
         Sino
-            Escribir "BOMBA: APAGADA (ESPERANDO AL AMANECER)";
+            Escribir "BOMBA: APAGADA - RESTRICCION NOCTURNA";
         FinSi
     Sino
-        Escribir "BOMBA: APAGADA (TANQUE LLENO)";
+        Escribir "BOMBA: APAGADA - TANQUE A CAPACIDAD MAXIMA";
     FinSi
 FinAlgoritmo
