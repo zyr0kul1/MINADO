@@ -1,17 +1,17 @@
-Algoritmo AlertaInversor
+Algoritmo ProteccionInversor
     Definir encendido Como Entero;
-    Definir v, f Como Real;
-    Escribir "Inversor encendido? (1:Si / 0:No):";
+    Definir v Como Real;
+    Escribir "Equipo encendido? (1:Si / 0:No):";
     Leer encendido;
     Si encendido == 1 Entonces
-        Escribir "Voltaje y Frecuencia (Hz):";
-        Leer v, f;
-        Si v < 100 O f > 65 Entonces
-            Escribir "ALERTA: FALLA EN RED";
+        Escribir "Ingrese voltaje de la linea:";
+        Leer v;
+        Si v < 100 O v > 130 Entonces
+            Escribir "ALERTA: VOLTAJE FUERA DE RANGO - PROTECCION ACTIVA";
         Sino
-            Escribir "RED ESTABLE";
+            Escribir "ESTADO: VOLTAJE ESTABLE - EQUIPO OPERANDO";
         FinSi
     Sino
-        Escribir "INVERSOR APAGADO";
+        Escribir "SISTEMA APAGADO";
     FinSi
 FinAlgoritmo
